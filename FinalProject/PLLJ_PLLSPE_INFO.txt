@@ -1,0 +1,35 @@
+PLL_Name	mysystem:u0|mysystem_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	93
+PLLSPEmax	100
+PLLSPEmin	-100
+
+PLL_Name	mysystem:u0|mysystem_pll_0:pll_0|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	mysystem:u0|mysystem_pll_1:pll_1|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	94
+PLLSPEmax	100
+PLLSPEmin	-100
+
+PLL_Name	mysystem:u0|mysystem_pll_1:pll_1|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	mysystem:u0|mysystem_sys_sdram_pll_0:sys_sdram_pll_0|mysystem_sys_sdram_pll_0_sys_pll:sys_pll|altera_pll:altera_pll_i|general[0].gpll~FRACTIONAL_PLL
+PLLJITTER	26
+PLLSPEmax	100
+PLLSPEmin	-100
+
+PLL_Name	mysystem:u0|mysystem_sys_sdram_pll_0:sys_sdram_pll_0|mysystem_sys_sdram_pll_0_sys_pll:sys_pll|altera_pll:altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+
+PLL_Name	mysystem:u0|mysystem_sys_sdram_pll_0:sys_sdram_pll_0|mysystem_sys_sdram_pll_0_sys_pll:sys_pll|altera_pll:altera_pll_i|general[1].gpll~PLL_OUTPUT_COUNTER
+PLLJITTER	NA
+PLLSPEmax	NA
+PLLSPEmin	NA
+

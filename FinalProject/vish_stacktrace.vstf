@@ -1,0 +1,17 @@
+# Current time Tue May  3 14:34:16 2016
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.3d"
+# Version = "2014.10"
+# Date = "Oct  7 2014"
+# Platform = linuxpe
+# 0    0x08308ea8: '<unknown (@0x8308ea8)>'
+# 1    0x084bc47d: '<unknown (@0x84bc47d)>'
+# 2    0x0850509a: '<unknown (@0x850509a)>'
+# 3    0x0850da3c: '<unknown (@0x850da3c)>'
+# 4    0x084be5fc: 'TclEvalObjEx + 0x6c' in '/apps/Altera/15.0/modelsim_ae/linuxaloem/vish'
+# 5    0x084bea96: 'Tcl_EvalObjEx + 0x36' in '/apps/Altera/15.0/modelsim_ae/linuxaloem/vish'
+# 6    0xf7b01eac: 'Itcl_EvalMemberCode + 0x3cc' in '/apps/Altera/current/modelsim_ae/bin/../linux/itcl3.4/libitcl3.4.so'
+# 7    0x0b12b92b: '<unknown (@0xb12b92b)>'
+# 8    0x0aa3b773: '<unknown (@0xaa3b773)>'
+# 9    0x7254745e: '<unknown (@0x7254745e)>'

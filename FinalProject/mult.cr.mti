@@ -1,0 +1,8 @@
+/home/acctsw/Desktop/mult_accelerator/mult_accelerator.v {1 {vlog -work work -stats=none /home/acctsw/Desktop/mult_accelerator/mult_accelerator.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module mult_accelerator
+
+Top level modules:
+	mult_accelerator
+
+} {} {}}

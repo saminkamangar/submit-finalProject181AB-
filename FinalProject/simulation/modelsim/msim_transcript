@@ -1,0 +1,722 @@
+# do lab4_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying /apps/Altera/15.0/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /apps/Altera/15.0/modelsim_ae/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlib mysystem
+# ** Warning: (vlib-34) Library already exists at "mysystem".
+# vmap mysystem mysystem
+# Model Technology ModelSim LE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet mysystem mysystem 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/mysystem.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:52 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/mysystem.v 
+# -- Compiling module mysystem
+# 
+# Top level modules:
+# 	mysystem
+# End time: 13:29:53 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_reset_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:53 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 13:29:53 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_reset_synchronizer.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:53 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 13:29:53 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:53 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2.v 
+# -- Compiling module mysystem_mm_interconnect_2
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2
+# End time: 13:29:53 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_avalon_st_adapter.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:53 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_avalon_st_adapter.v 
+# -- Compiling module mysystem_mm_interconnect_2_avalon_st_adapter
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_avalon_st_adapter
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_1.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:54 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_1.v 
+# -- Compiling module mysystem_mm_interconnect_1
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_1
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_1_avalon_st_adapter.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:54 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_1_avalon_st_adapter.v 
+# -- Compiling module mysystem_mm_interconnect_1_avalon_st_adapter
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_1_avalon_st_adapter
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:54 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_0.v 
+# -- Compiling module mysystem_mm_interconnect_0
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_0
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sysid_qsys_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:54 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sysid_qsys_0.v 
+# -- Compiling module mysystem_sysid_qsys_0
+# 
+# Top level modules:
+# 	mysystem_sysid_qsys_0
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sys_sdram_pll_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:54 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sys_sdram_pll_0.v 
+# -- Compiling module mysystem_sys_sdram_pll_0
+# 
+# Top level modules:
+# 	mysystem_sys_sdram_pll_0
+# End time: 13:29:54 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_up_avalon_reset_from_locked_signal.v 
+# -- Compiling module altera_up_avalon_reset_from_locked_signal
+# 
+# Top level modules:
+# 	altera_up_avalon_reset_from_locked_signal
+# End time: 13:29:55 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sys_sdram_pll_0_sys_pll.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_sys_sdram_pll_0_sys_pll.v 
+# -- Compiling module mysystem_sys_sdram_pll_0_sys_pll
+# 
+# Top level modules:
+# 	mysystem_sys_sdram_pll_0_sys_pll
+# End time: 13:29:55 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_switches.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_switches.v 
+# -- Compiling module mysystem_switches
+# 
+# Top level modules:
+# 	mysystem_switches
+# End time: 13:29:55 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_pll_1.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_pll_1.v 
+# -- Compiling module mysystem_pll_1
+# 
+# Top level modules:
+# 	mysystem_pll_1
+# End time: 13:29:55 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_pll_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_pll_0.v 
+# -- Compiling module mysystem_pll_0
+# 
+# Top level modules:
+# 	mysystem_pll_0
+# End time: 13:29:55 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_leds.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:55 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_leds.v 
+# -- Compiling module mysystem_leds
+# 
+# Top level modules:
+# 	mysystem_leds
+# End time: 13:29:56 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_jtag_uart_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:56 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_jtag_uart_0.v 
+# -- Compiling module mysystem_jtag_uart_0_sim_scfifo_w
+# -- Compiling module mysystem_jtag_uart_0_scfifo_w
+# -- Compiling module mysystem_jtag_uart_0_sim_scfifo_r
+# -- Compiling module mysystem_jtag_uart_0_scfifo_r
+# -- Compiling module mysystem_jtag_uart_0
+# 
+# Top level modules:
+# 	mysystem_jtag_uart_0
+# End time: 13:29:56 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_hps_0.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:56 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_hps_0.v 
+# -- Compiling module mysystem_hps_0
+# 
+# Top level modules:
+# 	mysystem_hps_0
+# End time: 13:29:56 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_hps_0_hps_io.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:56 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_hps_0_hps_io.v 
+# -- Compiling module mysystem_hps_0_hps_io
+# 
+# Top level modules:
+# 	mysystem_hps_0_hps_io
+# End time: 13:29:56 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:56 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram.v 
+# -- Compiling module hps_sdram
+# 
+# Top level modules:
+# 	hps_sdram
+# End time: 13:29:56 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:56 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_memphy.v 
+# -- Compiling module hps_sdram_p0_acv_hard_memphy
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_memphy
+# End time: 13:29:57 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_altdqdqs.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:57 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_altdqdqs.v 
+# -- Compiling module hps_sdram_p0_altdqdqs
+# 
+# Top level modules:
+# 	hps_sdram_p0_altdqdqs
+# End time: 13:29:57 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_ldc.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:57 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_ldc.v 
+# -- Compiling module hps_sdram_p0_acv_ldc
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_ldc
+# End time: 13:29:57 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_generic_ddio.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:57 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_generic_ddio.v 
+# -- Compiling module hps_sdram_p0_generic_ddio
+# 
+# Top level modules:
+# 	hps_sdram_p0_generic_ddio
+# End time: 13:29:57 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:57 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_mem_if_hhp_qseq_synth_top.v 
+# -- Compiling module altera_mem_if_hhp_qseq_synth_top
+# 
+# Top level modules:
+# 	altera_mem_if_hhp_qseq_synth_top
+# End time: 13:29:57 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:58 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_clock_pair_generator.v 
+# -- Compiling module hps_sdram_p0_clock_pair_generator
+# 
+# Top level modules:
+# 	hps_sdram_p0_clock_pair_generator
+# End time: 13:29:58 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:58 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_io_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_io_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_io_pads
+# End time: 13:29:58 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:29:58 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/hps_sdram_p0_acv_hard_addr_cmd_pads.v 
+# -- Compiling module hps_sdram_p0_acv_hard_addr_cmd_pads
+# 
+# Top level modules:
+# 	hps_sdram_p0_acv_hard_addr_cmd_pads
+# End time: 13:30:00 on Mar 11,2016, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:00 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr.v 
+# -- Compiling module alt_vipvfr131_vfr
+# 
+# Top level modules:
+# 	alt_vipvfr131_vfr
+# End time: 13:30:00 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr_controller.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:00 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr_controller.v 
+# -- Compiling module alt_vipvfr131_vfr_controller
+# 
+# Top level modules:
+# 	alt_vipvfr131_vfr_controller
+# End time: 13:30:00 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr_control_packet_encoder.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:00 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_vfr_control_packet_encoder.v 
+# -- Compiling module alt_vipvfr131_vfr_control_packet_encoder
+# 
+# Top level modules:
+# 	alt_vipvfr131_vfr_control_packet_encoder
+# End time: 13:30:01 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:01 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc.v 
+# -- Compiling module alt_vipvfr131_prc
+# 
+# Top level modules:
+# 	alt_vipvfr131_prc
+# End time: 13:30:02 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc_core.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:02 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc_core.v 
+# -- Compiling module alt_vipvfr131_prc_core
+# 
+# Top level modules:
+# 	alt_vipvfr131_prc_core
+# End time: 13:30:02 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc_read_master.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:02 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_prc_read_master.v 
+# -- Compiling module alt_vipvfr131_prc_read_master
+# 
+# Top level modules:
+# 	alt_vipvfr131_prc_read_master
+# End time: 13:30:02 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_common_avalon_mm_slave.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:02 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_common_avalon_mm_slave.v 
+# -- Compiling module alt_vipvfr131_common_avalon_mm_slave
+# 
+# Top level modules:
+# 	alt_vipvfr131_common_avalon_mm_slave
+# End time: 13:30:02 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_common_stream_output.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:02 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipvfr131_common_stream_output.v 
+# -- Compiling module alt_vipvfr131_common_stream_output
+# 
+# Top level modules:
+# 	alt_vipvfr131_common_stream_output
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_calculate_mode.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_calculate_mode.v 
+# -- Compiling module alt_vipitc131_IS2Vid_calculate_mode
+# 
+# Top level modules:
+# 	alt_vipitc131_IS2Vid_calculate_mode
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_control.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_control.v 
+# -- Compiling module alt_vipitc131_IS2Vid_control
+# 
+# Top level modules:
+# 	alt_vipitc131_IS2Vid_control
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_statemachine.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_IS2Vid_statemachine.v 
+# -- Compiling module alt_vipitc131_IS2Vid_statemachine
+# 
+# Top level modules:
+# 	alt_vipitc131_IS2Vid_statemachine
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_fifo.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_fifo.v 
+# -- Compiling module alt_vipitc131_common_fifo
+# 
+# Top level modules:
+# 	alt_vipitc131_common_fifo
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_generic_count.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_generic_count.v 
+# -- Compiling module alt_vipitc131_common_generic_count
+# 
+# Top level modules:
+# 	alt_vipitc131_common_generic_count
+# End time: 13:30:03 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_sync.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:03 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_sync.v 
+# -- Compiling module alt_vipitc131_common_sync
+# 
+# Top level modules:
+# 	alt_vipitc131_common_sync
+# End time: 13:30:04 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_trigger_sync.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:04 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/alt_vipitc131_common_trigger_sync.v 
+# -- Compiling module alt_vipitc131_common_trigger_sync
+# 
+# Top level modules:
+# 	alt_vipitc131_common_trigger_sync
+# End time: 13:30:04 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/accelerator.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:04 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/accelerator.v 
+# -- Compiling module accelerator
+# 
+# Top level modules:
+# 	accelerator
+# End time: 13:30:04 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_SDRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:04 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_SDRAM.v 
+# -- Compiling module mysystem_SDRAM_input_efifo_module
+# -- Compiling module mysystem_SDRAM
+# 
+# Top level modules:
+# 	mysystem_SDRAM
+# End time: 13:30:04 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/acctsw/Desktop/LAB4.New.New {/home/acctsw/Desktop/LAB4.New.New/lab4.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:04 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/acctsw/Desktop/LAB4.New.New" /home/acctsw/Desktop/LAB4.New.New/lab4.v 
+# -- Compiling module lab4
+# 
+# Top level modules:
+# 	lab4
+# End time: 13:30:04 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_irq_mapper_001.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:04 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_irq_mapper_001.sv 
+# -- Compiling module mysystem_irq_mapper_001
+# 
+# Top level modules:
+# 	mysystem_irq_mapper_001
+# End time: 13:30:05 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_irq_mapper.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:05 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_irq_mapper.sv 
+# -- Compiling module mysystem_irq_mapper
+# 
+# Top level modules:
+# 	mysystem_irq_mapper
+# End time: 13:30:05 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_avalon_st_adapter_error_adapter_0.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:05 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_avalon_st_adapter_error_adapter_0.sv 
+# -- Compiling module mysystem_mm_interconnect_2_avalon_st_adapter_error_adapter_0
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_avalon_st_adapter_error_adapter_0
+# End time: 13:30:05 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:05 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v 
+# -- Compiling module altera_avalon_st_handshake_clock_crosser
+# 
+# Top level modules:
+# 	altera_avalon_st_handshake_clock_crosser
+# End time: 13:30:05 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_st_clock_crosser.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:05 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_st_clock_crosser.v 
+# -- Compiling module altera_avalon_st_clock_crosser
+# 
+# Top level modules:
+# 	altera_avalon_st_clock_crosser
+# End time: 13:30:05 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_arbitrator.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:05 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_arbitrator.sv 
+# -- Compiling module altera_merlin_arbitrator
+# -- Compiling module altera_merlin_arb_adder
+# 
+# Top level modules:
+# 	altera_merlin_arbitrator
+# End time: 13:30:06 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_mux.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:06 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_mux.sv 
+# -- Compiling module mysystem_mm_interconnect_2_rsp_mux
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_rsp_mux
+# End time: 13:30:06 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_demux_001.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:06 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_demux_001.sv 
+# -- Compiling module mysystem_mm_interconnect_2_rsp_demux_001
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_rsp_demux_001
+# End time: 13:30:06 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_demux.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:06 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_rsp_demux.sv 
+# -- Compiling module mysystem_mm_interconnect_2_rsp_demux
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_rsp_demux
+# End time: 13:30:06 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_cmd_mux.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:06 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_cmd_mux.sv 
+# -- Compiling module mysystem_mm_interconnect_2_cmd_mux
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_cmd_mux
+# End time: 13:30:06 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_cmd_demux.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:06 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_cmd_demux.sv 
+# -- Compiling module mysystem_mm_interconnect_2_cmd_demux
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_cmd_demux
+# End time: 13:30:07 on Mar 11,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_adapter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:07 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_adapter.sv 
+# -- Compiling module altera_merlin_burst_adapter
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter
+# End time: 13:30:07 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:07 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv 
+# -- Compiling module altera_merlin_burst_adapter_burstwrap_increment
+# -- Compiling module altera_merlin_burst_adapter_adder
+# -- Compiling module altera_merlin_burst_adapter_subtractor
+# -- Compiling module altera_merlin_burst_adapter_min
+# -- Compiling module altera_merlin_burst_adapter_13_1
+# 
+# Top level modules:
+# 	altera_merlin_burst_adapter_13_1
+# End time: 13:30:07 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_address_alignment.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:07 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_address_alignment.sv 
+# -- Compiling module altera_merlin_address_alignment
+# 
+# Top level modules:
+# 	altera_merlin_address_alignment
+# End time: 13:30:07 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:07 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv 
+# -- Compiling module altera_merlin_traffic_limiter
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(531): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(602): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(603): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(604): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(605): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(606): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(607): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(612): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(614): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(617): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(618): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(644): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(646): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(647): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(648): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(649): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(650): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(655): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(657): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(660): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_traffic_limiter.sv(661): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# 
+# Top level modules:
+# 	altera_merlin_traffic_limiter
+# End time: 13:30:07 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 21
+# vlog -vlog01compat -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_sc_fifo.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:08 on Mar 11,2016
+# vlog -reportprogress 300 -vlog01compat -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_avalon_sc_fifo.v 
+# -- Compiling module altera_avalon_sc_fifo
+# 
+# Top level modules:
+# 	altera_avalon_sc_fifo
+# End time: 13:30:08 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_router_002.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:08 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_router_002.sv 
+# -- Compiling module mysystem_mm_interconnect_2_router_002_default_decode
+# -- Compiling module mysystem_mm_interconnect_2_router_002
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_router_002
+# End time: 13:30:08 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_router.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:08 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/mysystem_mm_interconnect_2_router.sv 
+# -- Compiling module mysystem_mm_interconnect_2_router_default_decode
+# -- Compiling module mysystem_mm_interconnect_2_router
+# 
+# Top level modules:
+# 	mysystem_mm_interconnect_2_router
+# End time: 13:30:08 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:08 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv 
+# -- Compiling module altera_merlin_slave_agent
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(618): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(488): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(489): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(490): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(491): (vlog-2583) [SVCHK] - Some checking for conflicts with always_comb and always_latch variables not yet supported. Run vopt to provide additional design-level checks.
+# ** Warning: /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_slave_agent.sv(34): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# 
+# Top level modules:
+# 	altera_merlin_slave_agent
+# End time: 13:30:08 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 6
+# vlog -sv -work mysystem +incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules {/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_uncompressor.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 13:30:08 on Mar 11,2016
+# vlog -reportprogress 300 -sv -work mysystem "+incdir+/home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules" /home/acctsw/Desktop/LAB4.New.New/mysystem/synthesis/submodules/altera_merlin_burst_uncompressor.sv 
+# -- Compiling module altera_merlin_burst_uncompressor
+# 
+# Top level modules:
+# 	altera_merlin_burst_uncompressor
+# End time: 13:30:08 on Mar 11,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

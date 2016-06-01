@@ -1,0 +1,8 @@
+/home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v {1 {vlog -work work -stats=none /home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v
+Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+-- Compiling module accelerator
+
+Top level modules:
+	accelerator
+
+} {} {}}

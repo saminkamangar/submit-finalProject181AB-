@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/acctsw
+vaccelerator
+!s110 1457732857
+!i10b 1
+!s100 QIReT5^YBL;OaURUzg?SQ1
+IHlSEWPkN:=E[kOJ19zEhL0
+Z0 V`JN@9S9cnhjKRR_L]QIcM3
+d/home/acctsw/Desktop/LAB4.New.New
+w1457732847
+8/home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v
+F/home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v
+L0 1
+Z1 OV;L;10.3d;59
+r1
+!s85 0
+31
+!s108 1457732856.986907
+!s107 /home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/acctsw/Desktop/LAB4.New.New/sobel_accelerator.v|
+!i113 1
+Z2 o-work work
+vmult_accelerator
+!s110 1462996901
+!i10b 1
+!s100 3NEzaHdJYcG:@g<ccn0L22
+I01MWAXQVT5:c:MNN7:F[;2
+R0
+d/home/acctsw/Desktop/mult_accelerator
+w1462996869
+8/home/acctsw/Desktop/mult_accelerator/mult_accelerator.v
+F/home/acctsw/Desktop/mult_accelerator/mult_accelerator.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s108 1462996901.003114
+!s107 /home/acctsw/Desktop/mult_accelerator/mult_accelerator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/acctsw/Desktop/mult_accelerator/mult_accelerator.v|
+!i113 1
+R2

@@ -1,0 +1,87 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst mysystem.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst mysystem.hps_0.gmac1 -pg 1
+preplace inst mysystem.hps_0.usb0 -pg 1
+preplace inst mysystem.hps_0.clk_0 -pg 1
+preplace inst mysystem.hps_0.hps_io.border -pg 1
+preplace inst mysystem.pll_0 -pg 1 -lvl 6 -y 250
+preplace inst mysystem.hps_0.sdrctl -pg 1
+preplace inst mysystem.hps_0.usb1 -pg 1
+preplace inst mysystem.hps_0.f2s_periph_ref_clk -pg 1
+preplace inst mysystem.pll_1 -pg 1 -lvl 11 -y 570
+preplace inst mysystem.hps_0.l3regs -pg 1
+preplace inst mysystem.hps_0.spim0 -pg 1
+preplace inst mysystem.hps_0.gpio0 -pg 1
+preplace inst mysystem -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst mysystem.hps_0.timer -pg 1
+preplace inst mysystem.hps_0.axi_sdram -pg 1
+preplace inst mysystem.hps_0.spim1 -pg 1
+preplace inst mysystem.hps_0.gpio1 -pg 1
+preplace inst mysystem.hps_0.wd_timer0 -pg 1
+preplace inst mysystem.alt_vip_vfr_0 -pg 1 -lvl 10 -y 130
+preplace inst mysystem.hps_0.sdmmc -pg 1
+preplace inst mysystem.hps_0.gpio2 -pg 1
+preplace inst mysystem.hps_0.wd_timer1 -pg 1
+preplace inst mysystem.hps_0.dma -pg 1
+preplace inst mysystem.hps_0.arm_gic_0 -pg 1
+preplace inst mysystem.hps_0.fpga_interfaces -pg 1
+preplace inst mysystem.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst mysystem.switches -pg 1 -lvl 10 -y 680
+preplace inst mysystem.jtag_uart_0 -pg 1 -lvl 10 -y 560
+preplace inst mysystem.hps_0.dcan0 -pg 1
+preplace inst mysystem.hps_0.nand0 -pg 1
+preplace inst mysystem.hps_0.fpgamgr -pg 1
+preplace inst mysystem.hps_0.arm_a9_0 -pg 1
+preplace inst mysystem.alt_vip_itc_0 -pg 1 -lvl 10 -y 30
+preplace inst mysystem.hps_0.dcan1 -pg 1
+preplace inst mysystem.hps_0.arm_a9_1 -pg 1
+preplace inst mysystem.hps_0.hps_io -pg 1
+preplace inst mysystem.sys_sdram_pll_0 -pg 1 -lvl 5 -y 120
+preplace inst mysystem.hps_0.i2c0 -pg 1
+preplace inst mysystem.hps_0.clkmgr -pg 1
+preplace inst mysystem.hps_0.f2s_sdram_ref_clk -pg 1
+preplace inst mysystem.hps_0 -pg 1 -lvl 11 -y 800
+preplace inst mysystem.SDRAM -pg 1 -lvl 6 -y 30
+preplace inst mysystem.mult_accelerator_0 -pg 1 -lvl 6 -y 170
+preplace inst mysystem.hps_0.i2c1 -pg 1
+preplace inst mysystem.hps_0.timer0 -pg 1
+preplace inst mysystem.hps_0.uart0 -pg 1
+preplace inst mysystem.hps_0.L2 -pg 1
+preplace inst mysystem.hps_0.eosc1 -pg 1
+preplace inst mysystem.hps_0.axi_ocram -pg 1
+preplace inst mysystem.hps_0.qspi -pg 1
+preplace inst mysystem.hps_0.i2c2 -pg 1
+preplace inst mysystem.hps_0.timer1 -pg 1
+preplace inst mysystem.hps_0.uart1 -pg 1
+preplace inst mysystem.hps_0.eosc2 -pg 1
+preplace inst mysystem.leds -pg 1 -lvl 10 -y 390
+preplace inst mysystem.hps_0.i2c3 -pg 1
+preplace inst mysystem.hps_0.timer2 -pg 1
+preplace inst mysystem.hps_0.rstmgr -pg 1
+preplace inst mysystem.sysid_qsys_0 -pg 1 -lvl 10 -y 290
+preplace inst mysystem.hps_0.timer3 -pg 1
+preplace inst mysystem.hps_0.sysmgr -pg 1
+preplace inst mysystem.hps_0.bridges -pg 1
+preplace inst mysystem.hps_0.gmac0 -pg 1
+preplace netloc FAN_OUT<net_container>mysystem</net_container>(SLAVE)alt_vip_vfr_0.clock_reset,(SLAVE)alt_vip_itc_0.is_clk_rst,(MASTER)pll_0.outclk0) 1 6 4 NJ 280 NJ 280 NJ 280 1960
+preplace netloc EXPORT<net_container>mysystem</net_container>(MASTER)sys_sdram_pll_0.sdram_clk,(MASTER)mysystem.system_sdram_clk) 1 5 7 NJ 360 NJ 380 NJ 380 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc POINT_TO_POINT<net_container>mysystem</net_container>(SLAVE)hps_0.f2h_axi_slave,(MASTER)alt_vip_vfr_0.avalon_master) 1 10 1 2480
+preplace netloc POINT_TO_POINT<net_container>mysystem</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)hps_0.f2h_irq0) 1 9 3 2040 670 NJ 560 2840
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)mysystem.hps_io,(SLAVE)hps_0.hps_io) 1 0 11 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ 870 NJ
+preplace netloc EXPORT<net_container>mysystem</net_container>(MASTER)hps_0.h2f_reset,(MASTER)mysystem.hps_0_h2f_reset) 1 11 1 NJ
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)sys_sdram_pll_0.ref_reset,(SLAVE)mysystem.system_ref_reset) 1 0 5 NJ 150 NJ 150 NJ 150 NJ 150 NJ
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)mysystem.dipsw_pio_external_connection,(SLAVE)switches.external_connection) 1 0 10 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ 710 NJ
+preplace netloc EXPORT<net_container>mysystem</net_container>(MASTER)pll_1.outclk0,(MASTER)mysystem.clk_65) 1 11 1 NJ
+preplace netloc FAN_OUT<net_container>mysystem</net_container>(SLAVE)sysid_qsys_0.control_slave,(SLAVE)leds.s1,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)alt_vip_vfr_0.avalon_slave,(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)switches.s1) 1 9 3 2020 1000 NJ 1000 2820
+preplace netloc FAN_IN<net_container>mysystem</net_container>(SLAVE)SDRAM.s1,(MASTER)mult_accelerator_0.avalon_master,(MASTER)hps_0.h2f_axi_master) 1 5 7 1570 160 1800 980 NJ 980 NJ 980 NJ 980 NJ 980 2840
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)hps_0.memory,(SLAVE)mysystem.memory) 1 0 11 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ 510 NJ
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)alt_vip_itc_0.clocked_video,(SLAVE)mysystem.alt_vip_itc_0_clocked_video) 1 0 10 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ 340 NJ
+preplace netloc FAN_OUT<net_container>mysystem</net_container>(SLAVE)sysid_qsys_0.reset,(SLAVE)alt_vip_itc_0.is_clk_rst_reset,(SLAVE)pll_0.reset,(SLAVE)SDRAM.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)switches.reset,(MASTER)sys_sdram_pll_0.reset_source,(SLAVE)pll_1.reset,(SLAVE)mult_accelerator_0.reset,(SLAVE)leds.reset,(SLAVE)alt_vip_vfr_0.clock_master_reset,(SLAVE)alt_vip_vfr_0.clock_reset_reset) 1 5 6 1550 140 NJ 140 NJ 140 NJ 140 1980 530 2460
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)mysystem.led_pio_external_connection,(SLAVE)leds.external_connection) 1 0 10 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ 420 NJ
+preplace netloc FAN_OUT<net_container>mysystem</net_container>(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)sysid_qsys_0.clk,(SLAVE)SDRAM.clk,(SLAVE)alt_vip_vfr_0.clock_master,(SLAVE)pll_1.refclk,(SLAVE)hps_0.f2h_axi_clock,(SLAVE)leds.clk,(SLAVE)switches.clk,(SLAVE)pll_0.refclk,(SLAVE)mult_accelerator_0.clock,(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)jtag_uart_0.clk,(SLAVE)hps_0.h2f_axi_clock) 1 5 6 1530 240 NJ 240 NJ 240 NJ 240 2000 550 2400
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)sys_sdram_pll_0.ref_clk,(SLAVE)mysystem.system_ref_clk) 1 0 5 NJ 130 NJ 130 NJ 130 NJ 130 NJ
+preplace netloc POINT_TO_POINT<net_container>mysystem</net_container>(MASTER)alt_vip_vfr_0.avalon_streaming_source,(SLAVE)alt_vip_itc_0.din) 1 9 2 2040 280 2400
+preplace netloc EXPORT<net_container>mysystem</net_container>(SLAVE)SDRAM.wire,(SLAVE)mysystem.sdram_wire) 1 0 6 NJ 240 NJ 240 NJ 240 NJ 240 NJ 240 NJ
+levelinfo -pg 1 0 190 2990
+levelinfo -hier mysystem 200 220 440 680 1100 1330 1620 1840 1860 1920 2150 2630 2860

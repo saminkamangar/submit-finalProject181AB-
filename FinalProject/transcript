@@ -1,0 +1,395 @@
+# Loading project mult
+# Compile of mult_accelerator.v was successful.
+vsim work.mult_accelerator
+# vsim 
+# Start time: 12:42:20 on May 11,2016
+# //  ModelSim ALTERA 10.3d Oct  7 2014 Linux 2.6.32-573.22.1.el6.x86_64
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.mult_accelerator
+add wave -position end  sim:/mult_accelerator/clk
+add wave -position end  sim:/mult_accelerator/read_n
+add wave -position end  sim:/mult_accelerator/write_n
+add wave -position end  sim:/mult_accelerator/chipselect
+add wave -position end  sim:/mult_accelerator/waitrequest
+add wave -position end  sim:/mult_accelerator/address
+add wave -position end  sim:/mult_accelerator/byteenable
+add wave -position end  sim:/mult_accelerator/readdatavalid
+add wave -position end  sim:/mult_accelerator/readdata
+add wave -position end  sim:/mult_accelerator/writedata
+add wave -position end  sim:/mult_accelerator/reset_n
+add wave -position end  sim:/mult_accelerator/weights_in
+add wave -position end  sim:/mult_accelerator/pixels_in
+add wave -position end  sim:/mult_accelerator/read_address_w
+add wave -position end  sim:/mult_accelerator/read_address_p
+add wave -position end  sim:/mult_accelerator/write_address
+add wave -position end  sim:/mult_accelerator/sum0
+add wave -position end  sim:/mult_accelerator/sum1
+add wave -position end  sim:/mult_accelerator/sum2
+add wave -position end  sim:/mult_accelerator/sum3
+add wave -position end  sim:/mult_accelerator/state
+add wave -position end  sim:/mult_accelerator/next_state
+add wave -position end  sim:/mult_accelerator/weights_load
+add wave -position end  sim:/mult_accelerator/pixels_load
+add wave -position end  sim:/mult_accelerator/weights_wait
+add wave -position end  sim:/mult_accelerator/pixels_wait
+add wave -position end  sim:/mult_accelerator/shift_en
+add wave -position end  sim:/mult_accelerator/write_en
+add wave -position end  sim:/mult_accelerator/idle
+add wave -position end  sim:/mult_accelerator/addr_load
+add wave -position end  sim:/mult_accelerator/start
+add wave -position end  sim:/mult_accelerator/done
+add wave -position end  sim:/mult_accelerator/result_valid
+add wave -position end  sim:/mult_accelerator/is_layer2
+add wave -position end  sim:/mult_accelerator/shift_count
+add wave -position end  sim:/mult_accelerator/pixel_count
+add wave -position end  sim:/mult_accelerator/row_count
+force -freeze sim:/mult_accelerator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/mult_accelerator/waitrequest 0 0
+force -freeze sim:/mult_accelerator/reset_n 0 0
+force -freeze sim:/mult_accelerator/readdatavalid 1 0
+force -freeze sim:/mult_accelerator/readdata 1111111111111110 0
+run
+run
+run
+force -freeze sim:/mult_accelerator/reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/reset_n 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/readdata 1111111111111101 0
+force -freeze sim:/mult_accelerator/reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart -f
+force -freeze sim:/mult_accelerator/readdatavalid 1 0
+force -freeze sim:/mult_accelerator/waitrequest 0 0
+force -freeze sim:/mult_accelerator/reset_n 0 0
+run
+run
+run
+force -freeze sim:/mult_accelerator/readdata 1111111111111101 0
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/clk 1 0, 0 {50 ps} -r 100
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# Compile of mult_accelerator.v was successful.
+vsim work.mult_accelerator
+# vsim 
+# Start time: 13:02:10 on May 11,2016
+# Loading work.mult_accelerator
+add wave -position end  sim:/mult_accelerator/clk
+add wave -position end  sim:/mult_accelerator/read_n
+add wave -position end  sim:/mult_accelerator/write_n
+add wave -position end  sim:/mult_accelerator/chipselect
+add wave -position end  sim:/mult_accelerator/waitrequest
+add wave -position end  sim:/mult_accelerator/address
+add wave -position end  sim:/mult_accelerator/byteenable
+add wave -position end  sim:/mult_accelerator/readdatavalid
+add wave -position end  sim:/mult_accelerator/readdata
+add wave -position end  sim:/mult_accelerator/writedata
+add wave -position end  sim:/mult_accelerator/reset_n
+add wave -position end  sim:/mult_accelerator/weights_in
+add wave -position end  sim:/mult_accelerator/pixels_in
+add wave -position end  sim:/mult_accelerator/read_address_w
+add wave -position end  sim:/mult_accelerator/read_address_p
+add wave -position end  sim:/mult_accelerator/write_address
+add wave -position end  sim:/mult_accelerator/sum0
+add wave -position end  sim:/mult_accelerator/sum1
+add wave -position end  sim:/mult_accelerator/sum2
+add wave -position end  sim:/mult_accelerator/sum3
+add wave -position end  sim:/mult_accelerator/state
+add wave -position end  sim:/mult_accelerator/next_state
+add wave -position end  sim:/mult_accelerator/weights_load
+add wave -position end  sim:/mult_accelerator/pixels_load
+add wave -position end  sim:/mult_accelerator/weights_wait
+add wave -position end  sim:/mult_accelerator/pixels_wait
+add wave -position end  sim:/mult_accelerator/shift_en
+add wave -position end  sim:/mult_accelerator/write_en
+add wave -position end  sim:/mult_accelerator/idle
+add wave -position end  sim:/mult_accelerator/addr_load
+add wave -position end  sim:/mult_accelerator/start
+add wave -position end  sim:/mult_accelerator/done
+add wave -position end  sim:/mult_accelerator/result_valid
+add wave -position end  sim:/mult_accelerator/is_layer2
+add wave -position end  sim:/mult_accelerator/shift_count
+add wave -position end  sim:/mult_accelerator/pixel_count
+add wave -position end  sim:/mult_accelerator/row_count
+force -freeze sim:/mult_accelerator/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/mult_accelerator/waitrequest 0 0
+force -freeze sim:/mult_accelerator/readdatavalid 1 0
+force -freeze sim:/mult_accelerator/reset_n 0 0
+force -freeze sim:/mult_accelerator/readdata 1111111111111101 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/mult_accelerator/reset_n 0 0
+run
+force -freeze sim:/mult_accelerator/readdata 1111111111111110 0
+force -freeze sim:/mult_accelerator/reset_n 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 13:24:04 on May 11,2016, Elapsed time: 0:21:54
+# Errors: 0, Warnings: 0

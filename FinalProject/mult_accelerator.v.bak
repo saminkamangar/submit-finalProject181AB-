@@ -1,0 +1,187 @@
+module mult_accelerator (
+	input clk,
+	output reg read_n =1 ,
+	output reg write_n  = 1,
+	output chipselect,
+	input waitrequest,
+	output reg [31:0] address = 32'hC0000000,
+	output [1:0] byteenable,
+	input readdatavalid,
+	input [15:0] readdata,
+	output reg [15:0] writedata,
+	input reset_n
+);
+
+assign byteenable = 2'b11;
+assign chipselect = 1'b1;
+
+parameter SDRAM_BASE = 32'hC0000000;
+
+parameter [4:0] 
+	IDLE  = 0,
+	READ_PIXELS = 1,
+	READ_WEIGHTS = 2,
+	COMP = 3,
+	WRITE  = 4,
+	WRITE_DONE = 5;
+	
+// pipeline registers
+reg signed [15:0] weights_in; // read in weights from sdram
+reg [15:0]  pixels_in; // read in pixels from sdram
+reg [31:0] read_address_w, read_address_p, write_address;
+reg signed [15:0] sum1 = 0, sum2 = 0, sum3 = 0, sum0 = 0; // accumulator registers
+reg signed [15:0] result; // stores final sum
+
+// state registers
+reg [4:0] state = IDLE, next_state = IDLE;
+
+// control signals
+reg weights_load = 0, pixels_load = 0;
+reg shift_en = 0;
+reg write_en = 0;
+reg idle = 1;
+reg start = 0, done = 0;
+reg result_valid = 0;
+
+// count registers
+reg [1:0] shift_count = 0; // keeps track of how many shifts in pixels_in; tells when to read in new pixels
+reg [19:0] pixel_count = 0; 
+reg [9:0] row_count = 0; // keeps track of how many rows have been calculated
+
+function [10:0] abs( input signed [10:0] x);
+	abs = (x>=0) ? x : -x;
+endfunction
+
+always @ (posedge clk) // state transition
+	state <= (!reset_n) ? IDLE: next_state;
+
+always @ (posedge clk) // control signals
+begin
+	idle <= 0;
+	weights_load <= 0;
+	pixels_load <= 0;
+	shift_en <= 0;
+	write_en <= 0;
+	done <= 0;
+	
+	case (next_state)
+		IDLE: begin
+			idle <= 1;
+		end
+		READ_PIXELS: begin
+			pixels_load <= 1;
+		end
+		READ_WEIGHTS: begin
+			weights_load <= 1;
+		end
+		COMP: begin
+			shift_en <= 1;
+		end
+		WRITE: begin
+			write_en <= 1;
+		end
+		WRITE_DONE: begin
+			done <= 1;
+		end
+	endcase
+end
+
+always @ (*) begin // next state logic
+	case (state)
+		IDLE: begin
+			next_state = (start) ? READ_PREV_INIT: IDLE;
+		end
+		READ_PIXELS: begin
+			next_state = (readdatavalid) ? READ_WEIGHTS: READ_PIXELS;
+		end
+		READ_WEIGHTS: begin
+			next_state = (readdatavalid) ? COMP: READ_WEIGHTS;
+		end
+		COMP: begin
+			next_state = (pixel_count >= 784) ? WRITE: ((shift_count >= 3) ? READ_PIXELS: READ_WEIGHTS);
+		end
+		WRITE: begin
+			next_state = (waitrequest) ? WRITE: ((row_count >= 200) ? WRITE_DONE: READ_PIXELS);
+		end
+		WRITE_DONE: begin
+			next_state = (waitrequest) ? WRITE_DONE: IDLE;
+		end
+	endcase
+end
+
+always @(posedge clk) begin// Computation pipeline
+	if (shift_en) begin 
+		sum0 <= (pixels_in[0]) ? sum0 + $signed(weights_in[3:0]): sum0;
+		sum1 <= (pixels_in[1]) ? sum1 + $signed(weights_in[7:4]): sum1;
+		sum2 <= (pixels_in[2]) ? sum2 + $signed(weights_in[11:8]): sum2;
+		sum3 <= (pixels_in[3]) ? sum3 + $signed(weights_in[15:12]): sum3;
+		pixels_in <= pixels_in >> 4;
+	end
+	else begin
+		sum0 <= (write_en) ? 0: sum0;
+		sum1 <= (write_en) ? 0: sum1;
+		sum2 <= (write_en) ? 0: sum2;
+		sum3 <= (write_en) ? 0: sum3;
+		weights_in <= (weights_load && readdatavalid) ? readdata: weights_in;
+		pixels_in <= (pixels_load && readdatavalid) ? readdata: pixels_in;
+	end
+end
+	
+always @ (posedge clk) begin // generate addresses, read_n, and write_n
+	address <= address;
+	read_address_p <= read_address_p;
+	read_address_w <= read_address_w;
+	write_address <= write_address;
+	read_n <= 1;
+	write_n <= 1;
+	writedata <= writedata;
+	if (idle) begin
+		address <= SDRAM_BASE; 
+		read_n <= 0;
+		read_address_w <= SDRAM_BASE; //
+		read_address_p <= SDRAM_BASE; //
+		write_address <= (SDRAM_BASE + WIDTH*HEIGHT + 2); //
+	end
+/*	else if (shift_en) begin
+		read_address_w <= read_address_w + 2;
+		read_address_p <= read_address_p + 1; //
+	end
+*/
+	else if (pixels_load) begin
+		address <= read_address_p;
+		read_address_p <= (readdatavalid) ? read_address_p + 2: read_address_p;
+		read_n <= 0;
+	end
+	else if (weights_load) begin
+		address <= read_address_w;
+		read_address_w <= (readdatavalid) ? read_address_w + 2: read_address_w;
+		read_n <= 0;
+	end
+	else if (write_en) begin
+		writedata <= sum0 + sum1 + sum2 + sum3; //
+		address <= write_address;
+		write_n <= 0;
+	end
+	else if (done) begin
+		writedata <= 16'hFFFF;
+		address <= SDRAM_BASE;
+		write_n <= 0;
+	end
+end
+
+always @ (posedge clk) begin // counts four shifts; need to read/write rows every two shifts
+	shift_count <= (idle) ? 0: ((shift_en) ? shift_count + 1: shift_count);
+end
+
+always @ (posedge clk) begin // keeps track of how many pixels have been processed
+	pixel_count <= (idle || write_en) ? 0: ((shift_en) ? pixel_count + 4: pixel_count);
+end
+
+always @ (posedge clk) begin // keeps track of rows calculated
+	row_count <= (idle) ? 0: ((write_en && !waitrequest) ? row_count + 1: row_count);
+end
+
+always @ (posedge clk) // generate start signal
+	start <= (idle && readdatavalid && readdata == 16'hFFFE) ? 1: 0;
+
+endmodule
